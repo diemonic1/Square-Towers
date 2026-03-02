@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99f503566cce48fbaafeeeddb8f5b2bf, type: 3}
+  m_Name: GameConfigInstaller
+  m_EditorClassIdentifier: 
+  _gameConfig:
+    HoldingTimeToGetSquareFromScrollInMs: 50
+    SquareColorsHex:
+    - '#E53935'
+    - '#D81B60'
+    - '#8E24AA'
+    - '#5E35B1'
+    - '#3949AB'
+    - '#1E88E5'
+    - '#039BE5'
+    - '#00ACC1'
+    - '#00897B'
+    - '#43A047'
+    - '#7CB342'
+    - '#C0CA33'
+    - '#FDD835'
+    - '#FFB300'
+    - '#FB8C00'
+    - '#F4511E'
+    - '#6D4C41'
+    - '#757575'
+    - '#546E7A'
+    - '#212121'

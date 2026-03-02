@@ -1,0 +1,24 @@
+{
+  "English": {
+    "#TipCreateNewTower": "Create a new turret",
+    "#TipAddSquareToTower": "Add a square to a tower",
+    "#TipDeleteSquare": "Throw out a square",
+    "#SquareAdded": "Square added",
+    "#TowerAdded": "Turret created",
+    "#SquareDeleted": "Square removed",
+    "#SquareDisappear_fail_towerIsMaxHeight": "The tower is overcrowded",
+    "#SquareDisappear_fail_rightFieldAlreadyHasTower": "There is already a turret on the field",
+    "#SquareDisappear_fail_squareInEmptyPlace": "The square is sent into the void"
+  },
+  "Russian": {
+    "#TipCreateNewTower": "Создать новую башенку",
+    "#TipAddSquareToTower": "Добавить квадрат в башню",
+    "#TipDeleteSquare": "Выкинуть квадрат",
+    "#SquareAdded": "Квадрат добавлен",
+    "#TowerAdded": "Башенка создана",
+    "#SquareDeleted": "Квадрат удален",
+    "#SquareDisappear_fail_towerIsMaxHeight": "Башенка переполнена",
+    "#SquareDisappear_fail_rightFieldAlreadyHasTower": "На поле уже есть башенка",
+    "#SquareDisappear_fail_squareInEmptyPlace": "Квадрат отправлен в пустоту"
+  }
+}
