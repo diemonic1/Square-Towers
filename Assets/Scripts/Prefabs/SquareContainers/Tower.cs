@@ -144,7 +144,7 @@ namespace Prefabs.SquareContainers
             
             float halfOfSquareWidth = _squareSize.Value.x / 2f;
             
-            float xPosition = GetTopSquare().transform.localPosition.x +
+            float xPosition = GetTopSquare().CurrentLocalPositionTarget.x +
                               Random.Range(-halfOfSquareWidth, halfOfSquareWidth);
             
             return new Vector3(xPosition, _squares.Count * _squareSize.Value.y, 0);

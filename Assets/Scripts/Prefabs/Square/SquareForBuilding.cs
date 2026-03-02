@@ -44,6 +44,8 @@ namespace Prefabs
         public bool FallAnimationNow { get; private set; }
         public Vector2 GetSquareSize => new Vector2(_boxCollider2D.size.x, _boxCollider2D.size.y);
 
+        public Vector2 CurrentLocalPositionTarget { get; private set; }
+
         public Tower Tower { get; private set; } = null;
         
         private TweenerCore<Quaternion, Vector3, QuaternionOptions> _rotationTweener;
@@ -59,8 +61,6 @@ namespace Prefabs
 
         private EAddingSquareResult _lastAddingSquareResult = EAddingSquareResult.fail_squareInEmptyPlace;
 
-        private Vector2 _currentLocalPositionTarget;
-        
         [Inject] private ConfigsService _configsService;
         [Inject] private LocalizationService _localizationService;
         
@@ -95,7 +95,7 @@ namespace Prefabs
 
         public SquareForSave GetSquareForSave()
         {
-            return new SquareForSave(_currentLocalPositionTarget, _color);
+            return new SquareForSave(CurrentLocalPositionTarget, _color);
         }
         
         public void TryAddToLastSquareContainer()
@@ -178,7 +178,7 @@ namespace Prefabs
         public void AnimateJump(Vector3 localTarget)
         {
             AnimatingNow = true;
-            _currentLocalPositionTarget = localTarget;
+            CurrentLocalPositionTarget = localTarget;
             
             Vector3 startPos = transform.localPosition;
 
@@ -307,7 +307,7 @@ namespace Prefabs
 
         public void MoveToPoint(Vector2 target, Action callBackOnComplete, bool withAnimation = true)
         {
-            _currentLocalPositionTarget = target;
+            CurrentLocalPositionTarget = target;
 
             if (withAnimation)
             {
@@ -336,7 +336,7 @@ namespace Prefabs
             
             Vector2 target = new Vector2(transform.localPosition.x, localTargetY);
             
-            _currentLocalPositionTarget = target;
+            CurrentLocalPositionTarget = target;
             
             transform
                 .DOLocalMove(target, fallDuration)
