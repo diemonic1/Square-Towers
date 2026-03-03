@@ -23,14 +23,17 @@ namespace Services.Monobehs
         
         public void SpawnNewSquareInHand(Color newSquareColor)
         {
-            SquareForBuilding newSquare = _diContainer
-                .InstantiatePrefab(_squareForBuildingPrefab, _squareInHandPrefabHandler)
-                .GetComponent<SquareForBuilding>();
+            if (Input.touchCount > 0 || Input.GetMouseButton(0))
+            {
+                SquareForBuilding newSquare = _diContainer
+                    .InstantiatePrefab(_squareForBuildingPrefab, _squareInHandPrefabHandler)
+                    .GetComponent<SquareForBuilding>();
             
-            newSquare.Init(newSquareColor);
-            newSquare.InitMovingSubscribe(MovingSquareNow);
+                newSquare.Init(newSquareColor);
+                newSquare.InitMovingSubscribe(MovingSquareNow);
             
-            _squareInHand = newSquare;
+                _squareInHand = newSquare;
+            }
         }
         
         public void AddExistingSquareInHand(SquareForBuilding square)
